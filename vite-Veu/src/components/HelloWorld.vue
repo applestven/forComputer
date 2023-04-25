@@ -125,19 +125,17 @@ export default {
 </script>
 
 <style lang="css">
-
-
 .calculator {
   width: 350px;
   margin: auto;
-  background-color: #555;
+  background-color: #fff;
   border-radius: 5px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
   padding: 10px;
 }
 
 .display {
-  background-color: #fff;
+  background-color: #f2f2f2;
   color: #333;
   font-size: 36px;
   text-align: right;
@@ -147,7 +145,9 @@ export default {
 }
 
 .key-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
 }
 
 .key {
@@ -155,11 +155,12 @@ export default {
   height: 70px;
   font-size: 24px;
   color: #fff;
-  background-color: #999;
+  background-color: #333;
   margin: 5px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .key.operation {
@@ -174,10 +175,14 @@ export default {
   outline: none;
 }
 
+.key:hover {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
 .key:active {
   transform: translateY(3px);
   box-shadow: none;
 }
-
 
 </style>
